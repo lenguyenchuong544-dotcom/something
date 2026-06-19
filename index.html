@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tổng Hợp Đề Thi Giải Tích</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script>
+        window.MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
         :root {
@@ -146,6 +153,41 @@
                     b) Hàm \(f\) có liên tục tại \((0,0)\) không? Tại sao?
                 </div>
                 <div id="sol-1-1" class="solution-container">
+                    <div class="solution-text" style="margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
+                        <p><strong>a) Sử dụng định nghĩa đạo hàm riêng, tính $f_x(0,0)$ và $f_y(0,0)$</strong></p>
+                        <p>Theo định nghĩa, đạo hàm riêng của hàm số $f(x,y)$ theo biến $x$ tại điểm $(0,0)$ là:
+                        $$f_x(0,0) = \lim_{x \to 0} \frac{f(x,0) - f(0,0)}{x - 0}$$</p>
+                        <p>Trước tiên, ta tính giá trị của $f(x,0)$ với $x \neq 0$:
+                        $$f(x,0) = \frac{x \sin(0) - 0 \cdot \sin(x)}{\sqrt{x^2 + 0^2}} = \frac{0 - 0}{|x|} = 0$$</p>
+                        <p>Theo đề bài, $f(0,0) = 0$. Thay vào biểu thức giới hạn, ta có:
+                        $$f_x(0,0) = \lim_{x \to 0} \frac{0 - 0}{x} = \lim_{x \to 0} 0 = 0$$</p>
+                        <p>Tương tự, đạo hàm riêng theo biến $y$ tại điểm $(0,0)$ là:
+                        $$f_y(0,0) = \lim_{y \to 0} \frac{f(0,y) - f(0,0)}{y - 0}$$</p>
+                        <p>Ta tính giá trị của $f(0,y)$ với $y \neq 0$:
+                        $$f(0,y) = \frac{0 \cdot \sin(y) - y \sin(0)}{\sqrt{0^2 + y^2}} = \frac{0 - 0}{|y|} = 0$$</p>
+                        <p>Thay vào biểu thức giới hạn, ta được:
+                        $$f_y(0,0) = \lim_{y \to 0} \frac{0 - 0}{y} = \lim_{y \to 0} 0 = 0$$</p>
+                        <p><strong>Kết luận:</strong> $f_x(0,0) = 0$ và $f_y(0,0) = 0$.</p>
+                        
+                        <p><strong>b) Hàm $f$ có liên tục tại $(0,0)$ không? Tại sao?</strong></p>
+                        <p>Để hàm số $f(x,y)$ liên tục tại $(0,0)$, ta cần chứng minh giới hạn của hàm số khi $(x,y) \to (0,0)$ bằng với giá trị của hàm tại điểm đó, tức là:
+                        $$\lim_{(x,y) \to (0,0)} f(x,y) = f(0,0) = 0$$</p>
+                        <p>Ta xét giới hạn:
+                        $$\lim_{(x,y) \to (0,0)} \frac{x \sin y - y \sin x}{\sqrt{x^2+y^2}}$$</p>
+                        <p>Ta sẽ sử dụng nguyên lý kẹp (định lý kẹp) để tìm giới hạn này. Bắt đầu bằng việc đánh giá trị tuyệt đối của tử số. Áp dụng bất đẳng thức tam giác và tính chất cơ bản của hàm lượng giác là $|\sin t| \le |t|$ với mọi số thực $t$, ta có:
+                        $$|x \sin y - y \sin x| \le |x \sin y| + |y \sin x| = |x||\sin y| + |y||\sin x| \le |x||y| + |y||x| = 2|xy|$$</p>
+                        <p>Do đó, với mọi $(x,y) \neq (0,0)$:
+                        $$0 \le |f(x,y)| = \left| \frac{x \sin y - y \sin x}{\sqrt{x^2+y^2}} \right| \le \frac{2|xy|}{\sqrt{x^2+y^2}}$$</p>
+                        <p>Mặt khác, theo bất đẳng thức AM-GM (Cauchy), ta luôn có $(|x| - |y|)^2 \ge 0 \implies x^2 + y^2 \ge 2|xy|$. Áp dụng vào bất đẳng thức trên:
+                        $$0 \le |f(x,y)| \le \frac{x^2 + y^2}{\sqrt{x^2+y^2}} = \sqrt{x^2 + y^2}$$</p>
+                        <p>Khi $(x,y) \to (0,0)$, rõ ràng:
+                        $$\lim_{(x,y) \to (0,0)} \sqrt{x^2 + y^2} = 0$$</p>
+                        <p>Vì giới hạn của hàm chặn trên bằng 0, theo nguyên lý kẹp, ta suy ra:
+                        $$\lim_{(x,y) \to (0,0)} |f(x,y)| = 0 \implies \lim_{(x,y) \to (0,0)} f(x,y) = 0$$</p>
+                        <p><strong>Kết luận:</strong> Vì $\lim_{(x,y) \to (0,0)} f(x,y) = 0 = f(0,0)$, hàm số $f(x,y)$ có liên tục tại điểm $(0,0)$.</p>
+                        <hr style="border: 0; height: 1px; background: var(--border-color); margin: 30px 0;">
+                        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;"><i>(Hình ảnh bài làm gốc của thầy/cô)</i></p>
+                    </div>
                     <div class="solution-images">
                         <img src="Messenger_creation_01A56167-5882-4C31-91BF-D8008E9091C2.jpeg" alt="Lời giải câu 1">
                     </div>
