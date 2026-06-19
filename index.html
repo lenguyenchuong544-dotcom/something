@@ -258,6 +258,41 @@
                     Tính tích phân kép \(\iint_D (x+2y)dA\), trong đó \(D\) là miền bị chặn bởi 2 parabol \(y=2x^2\) và \(y=1+x^2\).
                 </div>
                 <div id="sol-1-3" class="solution-container">
+                    <div class="solution-text" style="margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
+                        <p><strong>Bước 1: Xác định miền lấy tích phân $D$</strong></p>
+                        <p>Trước tiên, ta tìm hoành độ giao điểm của hai parabol bằng cách giải phương trình:
+                        $$2x^2 = 1 + x^2 \implies x^2 = 1 \implies x = -1 \text{ và } x = 1$$</p>
+                        <p>Trong khoảng $x \in [-1,1]$, ta lấy thử $x = 0$ để kiểm tra xem đường nào nằm trên:<br>
+                        - Đường thứ nhất: $y = 2(0)^2 = 0$<br>
+                        - Đường thứ hai: $y = 1 + 0^2 = 1$</p>
+                        <p>Vì $1 > 0$, nên trên đoạn $[-1,1]$, parabol $y = 1+x^2$ luôn nằm phía trên parabol $y = 2x^2$.<br>
+                        Do đó, miền $D$ được xác định bởi:
+                        $$D = \{(x,y) \in \mathbb{R}^2 \mid -1 \le x \le 1, \, 2x^2 \le y \le 1+x^2\}$$</p>
+                        
+                        <p><strong>Bước 2: Thiết lập và tính tích phân</strong></p>
+                        <p>Dựa vào miền $D$ đã xác định, ta đưa tích phân kép về dạng tích phân lặp (tích phân theo $y$ trước, theo $x$ sau):
+                        $$I = \int_{-1}^{1} \left( \int_{2x^2}^{1+x^2} (x+2y) \, dy \right) dx$$</p>
+                        <p>Tính tích phân bên trong (theo biến $y$):
+                        $$\int_{2x^2}^{1+x^2} (x+2y) \, dy = \left[ xy + y^2 \right]_{y=2x^2}^{y=1+x^2}$$</p>
+                        <p>Thay cận trên và cận dưới vào:
+                        $$= \left( x(1+x^2) + (1+x^2)^2 \right) - \left( x(2x^2) + (2x^2)^2 \right)$$
+                        $$= (x + x^3 + 1 + 2x^2 + x^4) - (2x^3 + 4x^4)$$</p>
+                        <p>Gộp các số hạng cùng bậc, ta được:
+                        $$= x^4 - 4x^4 + x^3 - 2x^3 + 2x^2 + x + 1$$
+                        $$= -3x^4 - x^3 + 2x^2 + x + 1$$</p>
+                        <p>Tính tích phân bên ngoài (theo biến $x$), thay kết quả vừa tính vào tích phân ngoài cùng:
+                        $$I = \int_{-1}^{1} (-3x^4 - x^3 + 2x^2 + x + 1) \, dx$$</p>
+                        <p><strong>Mẹo tính nhanh:</strong> Nhận thấy đoạn lấy tích phân đối xứng qua gốc tọa độ $[-1,1]$. Với các hàm lẻ (như $x^3$ và $x$), tích phân trên đoạn đối xứng sẽ bằng 0. Do đó: $\int_{-1}^{1} (-x^3 + x) \, dx = 0$.</p>
+                        <p>Phần còn lại chỉ là các hàm chẵn:
+                        $$I = \int_{-1}^{1} (-3x^4 + 2x^2 + 1) \, dx = 2 \int_{0}^{1} (-3x^4 + 2x^2 + 1) \, dx$$</p>
+                        <p>Tính nguyên hàm:
+                        $$I = 2 \left[ -\frac{3}{5}x^5 + \frac{2}{3}x^3 + x \right]_{0}^{1}$$
+                        $$I = 2 \left( -\frac{3}{5} + \frac{2}{3} + 1 \right)$$
+                        $$I = 2 \left( \frac{-9 + 10 + 15}{15} \right) = 2 \left( \frac{16}{15} \right) = \frac{32}{15}$$</p>
+                        <p><strong>Kết luận:</strong> Giá trị của tích phân kép là $I = \frac{32}{15}$</p>
+                        <hr style="border: 0; height: 1px; background: var(--border-color); margin: 30px 0;">
+                        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;"><i>(Hình ảnh bài làm gốc của thầy/cô)</i></p>
+                    </div>
                     <div class="solution-images">
                         <img src="Messenger_creation_253CEA6C-E596-47FE-A694-EE4385322CB8.jpeg" alt="Lời giải câu 3">
                     </div>
