@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Hợp Đề Thi Giải Tích</title>
+    <!-- Thêm MathJax để hiển thị công thức toán học -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.6;
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            border-bottom: 2px solid #333;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            margin-top: 40px;
+            color: #0056b3;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .question {
+            margin-bottom: 20px;
+            padding-left: 15px;
+        }
+        .question-title {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tổng Hợp Đề Thi Giải Tích</h1>
+        <p><em>Dưới đây là 5 đề thi thử được phân bổ từ tất cả các Ví dụ và bài tập được trích xuất từ 33 hình ảnh bài giảng. Mỗi đề gồm 3-4 câu hỏi.</em></p>
+
+        <h2>Đề Thi Số 1: Đạo hàm riêng và Tích phân kép</h2>
+        <div class="question">
+            <span class="question-title">Câu 1 (Ví dụ 2.4):</span> Cho hàm số:
+            $$f(x,y) = \begin{cases} \frac{x\sin y - y\sin x}{\sqrt{x^2+y^2}} & \text{nếu } (x,y) \neq (0,0) \\ 0 & \text{nếu } (x,y) = (0,0) \end{cases}$$
+            a) Sử dụng định nghĩa đạo hàm riêng, tính \(f_x(0,0)\) và \(f_y(0,0)\).<br>
+            b) Hàm \(f\) có liên tục tại \((0,0)\) không? Tại sao?
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 2 (Ví dụ 3.1a):</span> Bằng cách đổi thứ tự lấy tích phân, hãy tính:
+            $$I = \int_0^1 \int_y^1 x e^{x^3} dx dy$$
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 3 (Ví dụ 3.2):</span> Tính tích phân kép \(\iint_D (x+2y)dA\), trong đó \(D\) là miền bị chặn bởi 2 parabol \(y=2x^2\) và \(y=1+x^2\).
+        </div>
+
+        <h2>Đề Thi Số 2: Cực trị và Tích phân đường</h2>
+        <div class="question">
+            <span class="question-title">Câu 1 (Ví dụ 2.11):</span> Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số \(f(x,y) = x^2 - 2y^2 - 2xy\) trong hình tròn đơn vị \(x^2 + y^2 \le 1\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 2 (Ví dụ 3.3):</span> Tính tích phân kép \(\iint_D y dA\), trong đó \(D\) là miền nằm trong góc phần tư thứ nhất, nằm phía trên hyperbola \(xy=1\), và giới hạn bởi các đường thẳng \(y=x\), \(y=2\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 3 (Ví dụ 4.1):</span> Tính tích phân đường \(I = \oint_C y^2 dx + x^2 dy\), trong đó \(C\) là đường biên của tam giác đi qua 3 đỉnh \(O(0,0)\), \(A(2,0)\), \(B(2,1)\) theo chiều ngược kim đồng hồ.
+        </div>
+
+        <h2>Đề Thi Số 3: Cực trị và Ứng dụng tích phân (Trọng tâm)</h2>
+        <div class="question">
+            <span class="question-title">Câu 1 (Ví dụ 2.12):</span> Tìm giá trị lớn nhất và nhỏ nhất của hàm số \(f(x,y) = xy^2\) trong miền hình ellipse \(2x^2 + y^2 \le 6\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 2 (Ví dụ 3.1b):</span> Hãy đổi thứ tự lấy tích phân để tính:
+            $$I = \int_0^1 \int_x^1 \cos(y^2) dy dx$$
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 3 (Ví dụ 3.6):</span> Một tấm mỏng có dạng hình tam giác vuông cân với 3 đỉnh \(O(0,0)\), \(A(a,0)\), \(B(0,a)\). Mật độ khối lượng tại mỗi điểm tỉ lệ thuận với bình phương khoảng cách từ điểm đó đến gốc tọa độ. Tìm tọa độ trọng tâm của tấm mỏng.
+        </div>
+
+        <h2>Đề Thi Số 4: Tích phân bội và Tích phân mặt</h2>
+        <div class="question">
+            <span class="question-title">Câu 1 (Ví dụ 3.5):</span> Một tấm mỏng có dạng miền \(D\) nằm trong đường tròn \(x^2+y^2=2y\) nhưng nằm ngoài đường tròn \(x^2+y^2=1\). Biết rằng mật độ tại mỗi điểm tỉ lệ nghịch với khoảng cách từ điểm đó đến gốc tọa độ. Tìm các tọa độ trọng tâm của tấm mỏng.
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 2 (Ví dụ 3.7):</span> Tính thể tích của khối nằm trong mặt cầu \(x^2 + y^2 + z^2 = 16\), phía trên mặt phẳng \(Oxy\) và phía dưới mặt nón \(z = \frac{1}{\sqrt{3}}\sqrt{x^2+y^2}\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 3 (Ví dụ 5.3):</span> Tính tích phân mặt loại 1:
+            $$I = \iint_S (z+x^2+y^2)dS$$
+            với \(S\) là phần mặt nón \(z = \sqrt{x^2+y^2}\), giới hạn bởi \(0 \le z \le a\).
+        </div>
+
+        <h2>Đề Thi Số 5: Phương trình vi phân</h2>
+        <div class="question">
+            <span class="question-title">Câu 1 (Ví dụ 6.1):</span> Giải bài toán giá trị ban đầu sau:
+            $$y'' - 2y' + 5y = e^x(8x^2+4)$$
+            với điều kiện \(y(0) = 1, y'(0) = -1\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 2 (Ví dụ 6.3):</span> Giải phương trình vi phân sau bằng phương pháp biến thiên hằng số:
+            $$y'' - 2y' + y = \frac{e^x}{1+x^2}$$
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 3 (Ví dụ 6.4):</span> Tìm nghiệm gần \(x=0\) bằng phương pháp chuỗi lũy thừa của phương trình vi phân sau:
+            $$y'' + x^2y = 0$$
+            với điều kiện ban đầu \(y(0) = 1, y'(0) = 0\).
+        </div>
+        <div class="question">
+            <span class="question-title">Câu 4 (Bài tập thêm):</span> Tìm nghiệm dưới dạng chuỗi lũy thừa của phương trình vi phân sau:
+            $$x^2y'' + xy' + x^2y = 0$$
+            với điều kiện ban đầu \(y(0) = 1, y'(0) = 0\).
+        </div>
+    </div>
+</body>
+</html>
