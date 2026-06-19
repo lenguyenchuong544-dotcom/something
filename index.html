@@ -204,6 +204,45 @@
                     $$I = \int_0^1 \int_y^1 x e^{x^3} dx dy$$
                 </div>
                 <div id="sol-1-2" class="solution-container">
+                    <div class="solution-text" style="margin-bottom: 20px; font-size: 1.05rem; line-height: 1.8;">
+                        <p><strong>1. Xác định miền lấy tích phân ban đầu</strong></p>
+                        <p>Từ tích phân ban đầu:
+                        $$I = \int_{0}^{1} \int_{y}^{1} x e^{x^3} \, dx \, dy$$</p>
+                        <p>Ta xác định được miền tích phân $D$ giới hạn bởi các bất phương trình:<br>
+                        - Cận của $y$ (lớp ngoài): $0 \le y \le 1$<br>
+                        - Cận của $x$ (lớp trong): $y \le x \le 1$</p>
+                        <p>Nếu vẽ miền $D$ này trên hệ trục tọa độ $Oxy$, bạn sẽ thấy nó là một hình tam giác được giới hạn bởi ba đường:<br>
+                        - Đường thẳng $x = y$ (hay $y = x$)<br>
+                        - Đường thẳng $x = 1$<br>
+                        - Trục hoành $y = 0$</p>
+                        <p><em>(Lý do ta phải đổi thứ tự là vì hàm $x e^{x^3}$ không thể tìm được nguyên hàm sơ cấp theo biến $x$ một cách trực tiếp).</em></p>
+                        
+                        <p><strong>2. Đổi thứ tự lấy tích phân ($dy \, dx$)</strong></p>
+                        <p>Bây giờ, ta chiếu miền tam giác $D$ lên trục $Ox$ để thiết lập tích phân theo thứ tự lấy $dy$ trước, $dx$ sau:<br>
+                        - Cận của $x$ (lớp ngoài): Nhìn trên trục $Ox$, hình tam giác trải dài từ $x = 0$ đến $x = 1$. Vậy $0 \le x \le 1$.<br>
+                        - Cận của $y$ (lớp trong): Với một giá trị $x$ cố định nằm trong khoảng $[0, 1]$, tia quét song song với trục $Oy$ đi từ dưới lên trên sẽ đụng trục hoành đầu tiên ($y = 0$) và đụng đường chéo cuối cùng ($y = x$). Vậy $0 \le y \le x$.</p>
+                        <p>Tích phân mới sau khi đổi thứ tự sẽ là:
+                        $$I = \int_{0}^{1} \int_{0}^{x} x e^{x^3} \, dy \, dx$$</p>
+                        
+                        <p><strong>3. Tính toán tích phân</strong></p>
+                        <p><strong>Bước 1:</strong> Tính tích phân lớp trong theo biến $y$<br>
+                        Lúc này ta coi $x$ là hằng số:
+                        $$\int_{0}^{x} x e^{x^3} \, dy = x e^{x^3} \cdot y \Big|_{0}^{x} = x e^{x^3} \cdot (x - 0) = x^2 e^{x^3}$$</p>
+                        <p><strong>Bước 2:</strong> Thay vào và tính tích phân lớp ngoài theo biến $x$
+                        $$I = \int_{0}^{1} x^2 e^{x^3} \, dx$$</p>
+                        <p>Để giải tích phân này, ta dùng phương pháp đổi biến số:<br>
+                        Đặt $u = x^3 \implies du = 3x^2 dx \implies x^2 dx = \frac{du}{3}$</p>
+                        <p>Đổi cận:<br>
+                        - Khi $x = 0 \implies u = 0^3 = 0$<br>
+                        - Khi $x = 1 \implies u = 1^3 = 1$</p>
+                        <p>Thay vào phương trình:
+                        $$I = \int_{0}^{1} e^u \, \frac{du}{3} = \frac{1}{3} \int_{0}^{1} e^u \, du$$
+                        $$I = \frac{1}{3} \cdot e^u \Big|_{0}^{1} = \frac{1}{3} (e^1 - e^0)$$</p>
+                        <p><strong>Kết luận</strong>
+                        $$I = \frac{e - 1}{3}$$</p>
+                        <hr style="border: 0; height: 1px; background: var(--border-color); margin: 30px 0;">
+                        <p style="text-align: center; color: var(--text-muted); font-size: 0.9rem;"><i>(Hình ảnh bài làm gốc của thầy/cô)</i></p>
+                    </div>
                     <div class="solution-images">
                         <img src="Messenger_creation_1B0F9B13-ECAA-4A4A-A1C8-DB4B59A18C56.jpeg" alt="Lời giải câu 2">
                     </div>
